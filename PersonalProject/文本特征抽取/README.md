@@ -32,4 +32,4 @@
 
 （使用pyecharts进行可视化，输出html网页如下：）
 
-![image-20200130185648670](C:\Users\kzxzc\AppData\Local\GitHubDesktop\Advanced-Programming\PersonalProject\文本特征抽取\image-sample.png)
+![image-sample](image-sample.png)
