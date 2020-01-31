@@ -1,6 +1,7 @@
-from pathlib import Path
 import jieba.posseg as pseg
-
+from pyecharts import options as opts
+from pyecharts.charts import Page, WordCloud
+from pyecharts.globals import SymbolType
 
 def READFILE(filename): # 读取文件内容
 	content = ""
@@ -48,6 +49,13 @@ def Relation_analysis(name_list,relation):
 	return relation
 
 
-
+def wordcloud_diamond(words,filename)-> WordCloud:
+	c = (
+        WordCloud()
+        .add("", words, word_size_range=[20, 100], shape=SymbolType.DIAMOND)
+        .set_global_opts(title_opts=opts.TitleOpts(title=filename+"的人物词云"))
+    )
+	c.render(filename+"_人物词云.html")
+	return 0
 
 
